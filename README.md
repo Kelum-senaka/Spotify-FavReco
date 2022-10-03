@@ -22,7 +22,8 @@ Numerical features like  -
 3. Instrumentalness
 4. Speechiness
 5. Acousticness etc. 
-were retrived as part of the audio features
+were retrived as part of the audio features. 
+Refer to ```Features.py``` for the code.
 
 ### Pre-processing 
 The audio features extracted were merged with the base dataset on the basis of track id.
@@ -31,7 +32,7 @@ We dropped the duplicates by creating a column consisting of summation of track 
 Another column of Genre List was created containing the list of genres of that particular track. Further, this column was used to understand the Term frequency — Inverse document frequency analysis of words in the whole dataset. 
 No Nan values were found after dropping the irrelevant columns therefore no mising value imputation was done.
 
-A final pre-processed file was generated. 
+A final pre-processed file was generated.
 
 ### Feature Engineering and Sentiment Analysis
 Before modelling and after splitting we scaled the selected data using normalisation to shift the distribution within the new range of 0 and 1.
@@ -82,12 +83,13 @@ K-Elbow plot between number of clusters and inertia values was graphed which hig
 
 Hence model was finally trained on the 9 audio scaled fetaures getting divided into 8 different clusters and stored under the name model.pkl using joblib.
 Joblib is a set of tools to provide lightweight pipelining in Python and is optimized to be fast and robust on large data sets.
+Refer to ```model.py``` for the elaborated code.
 
 ### Pre-Processing again
 We had to analyse the number of songs going in each cluster.
 To do so, a cluster column was created in the audio scaled features dataframe and cluster labels returned obtained through kmeans.labels_ were stored in that column.
 
-A merged dataset file consisting of the pre-processing file and audio scaled feature file was stored under ``cluster.csv``.
+A merged dataset file consisting of the pre-processing file and audio scaled feature file was stored under ``cluster.csv`` present in the **Data** Folder
 
 ### User Inputs 
 The user gives an input of playlist's URL and the number of recommendation he/she wants.
@@ -102,6 +104,9 @@ The user gets the top recommended tracks.
 
 The perceentage obtained for each cluster is multiplied with the number of track recommendation user wants. 
 Therefore the type of recommendation is directly dependant on the weightage(percentage value) of the cluster and the track name are appended in a seperate output list.
+```recommendation.py``` can be referred for the back-end understanding.
+
+```app.py``` is main driver file.
 
 
 ## Deployment 
