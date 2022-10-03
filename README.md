@@ -14,7 +14,7 @@ Inside the playlists, we have tracks' information like the names of artists, alb
 
 This whole dataset was considered as the base dataset fused further in feature extraction.
 
-Audio features of the first 2000 entries of the base dataset were extracted through our own client_id and client_secret  obtained through 'Spotify Account for Developers'
+Audio features of the first 2000 entries of the base dataset were extracted through our own client_id and client_secret  obtained through 'Spotify Account for Developers'.
 
 Numerical features like  -
 1. Danceability
@@ -23,7 +23,7 @@ Numerical features like  -
 4. Speechiness
 5. Acousticness etc. 
 were retrived as part of the audio features. 
-Refer to ```Features.py``` for the code.
+Refer to ```features.py``` for the code.
 
 ### Pre-processing 
 The audio features extracted were merged with the base dataset on the basis of track id.
