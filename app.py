@@ -29,7 +29,7 @@ def recommend():
    predictions=model.predict(df.values)
    tracks=track_reco(prediction=predictions,n=n)
 
-   return render_template('results.html',songs= tracks['track_name'])
+   return render_template('results.html',songs= tracks.track_name.to_list())
 
 
 if __name__ == '__main__':

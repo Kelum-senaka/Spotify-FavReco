@@ -1,5 +1,5 @@
 body {
-    background-image: linear-gradient(rgb(35, 63, 4), rgb(95, 236, 76), rgb(10, 39, 4));
+    background-image: linear-gradient(rgb(38, 5, 87), rgb(155, 135, 228), rgb(38, 5, 87));
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -41,7 +41,8 @@ body{
 
 .song {
     background-color: #ececec;
-    border-left: solid 4px #f3ef17;
+    border-left: solid 5px #908be0;
+    border-right: solid 5px #908be0;
     line-height: 18px;
     overflow: hidden;
     padding: 12px;
@@ -63,7 +64,7 @@ input.button1, input.input1, #number-of-recs{
     font-weight:300;
     color:#000000;
     text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
-    background-color:#81b71a;
+    background-color:#908be0;
     text-align:center;
     transition: all 0.15s;
 }

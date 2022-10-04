@@ -1,6 +1,9 @@
 {% extends "home.html" %}
 {% block results %}
 <div class='results'>
-    <h2> {{ songs }} </h2>   
+    <h2 style='color: #ececec'>Recommended Tracks</h2>
+        {% for song in songs %}
+        <p class='song' style="font-size: 11pt"> {{song}}  </p>
+        {% endfor %}     
 </div>
 {% endblock %}
