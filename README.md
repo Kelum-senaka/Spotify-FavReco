@@ -4,10 +4,10 @@ So, in this project we analyzed the audio dynamics of numerical features of diff
 
 
 ### Dataset
-The dataset we are working on is a combination of different playlists comprising of information like -
-1. Number of tracks in that playlist
-2. Number of albums used in that playlist
-3. Followers of that playlist
+The dataset we are working on is a combination of different playlists comprising of information like - <br/>
+1. Number of tracks in that playlist <br/>
+2. Number of albums used in that playlist <br/>
+3. Followers of that playlist <br/>
 This  web-scrapped dataset of 2017 consists of over ***90,000*** entries and was broken down into ***4 json file*** for simpler transferrable purpose.
 
 Inside the playlists, we have tracks' information like the names of artists, albums and tracks and their respective URIs along with the duration of that particualr track in milliseconds.
@@ -16,12 +16,12 @@ This whole dataset was considered as the **base dataset** used further in featur
 
 Audio features of the first 2000 entries of the base dataset were extracted through our own client_id and client_secret  obtained through 'Spotify Account for Developers'.
 
-Numerical features like  -
-**1. Danceability**
-**2. Loudness**
-**3. Instrumentalness**
-**4. Speechiness**
-**5. Acousticness** etc. 
+Numerical features like  -<br/>
+**1. Danceability** <br/>
+**2. Loudness** <br/>
+**3. Instrumentalness** <br/>
+**4. Speechiness** <br/>
+**5. Acousticness** etc. <br/>
 were retrived as part of the audio features. 
 Refer to ```features.py``` for the code.
 
@@ -73,10 +73,10 @@ The prediction of **clusters** were identified on the basis of the previously de
 
 Inertia values i.e. the parameter to decide how well a dataset was clustered by K-Means by calculating the sum of squared distances of audio features to their closest cluster centre were stored in a list.
 
-***Silhouette score analysis*** has been done to determine the number of clusters. The coefficients determine how close each point in one cluster is to points in the neighboring clusters. It ranges between -1 and 1 where
-**1. near to +1** -> sample is far away from the neighboring clusters.
-**2. near to 0** ->  the sample is on or very close to the decision boundary between two neighboring clusters
-**3. near to -1** -> samples might have been assigned to the wrong cluster
+***Silhouette score analysis*** has been done to determine the number of clusters. The coefficients determine how close each point in one cluster is to points in the neighboring clusters. It ranges between -1 and 1 where - <br/>
+**1. near to +1** -> sample is far away from the neighboring clusters. <br/>
+**2. near to 0** ->  the sample is on or very close to the decision boundary between two neighboring clusters. <br/>
+**3. near to -1** -> samples might have been assigned to the wrong cluster. <br/>
 
 Through observation of silhouette co-eficients, the number of clusters could be either 8 or 11.
 K-Elbow plot between number of clusters and inertia values was graphed which highlighted that inertia(or distrotion) start decreasing in a linear fashion after k=8.
@@ -112,7 +112,8 @@ Therefore the type of recommendation is directly dependant on the weightage(perc
 ### Deployment 
 ##### Flask
 - Our web application has been built on flask and can be found here [Music Recommendation System](...........).
-Flask is used for developing web applications using python and comes with in-built advantages like built-in development server and a fast debugger,lightweight, secure  cookies are supported,Request dispatching using REST to name a few. The files of this part are in (...) folder.
+Flask is used for developing web applications using python and comes with in-built advantages like built-in development server and a fast debugger,lightweight, secure  cookies are supported,Request dispatching using REST to name a few. The files of this part are set up in ```venv``` folder.
+![d21e3352-e081-419e-9796-61197cad7e64](https://user-images.githubusercontent.com/63547219/193746230-cd5d235a-1858-4d01-b746-a155ad3f8c5c.jpg)
 
 
 
